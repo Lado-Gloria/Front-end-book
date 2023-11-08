@@ -1,0 +1,33 @@
+.card {
+    /* Your card styles here */
+    position: relative;
+    width: 400px;
+    height: 600px;
+    margin-bottom: 1em;
+  }
+  
+  .tooltip {
+    display: none;
+    background: #5f5e5e;
+    color: blue;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .tooltip {
+    /* Tooltip styles */
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  .card:hover .tooltip {
+    display: block;
+  }
