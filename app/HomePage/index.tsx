@@ -322,7 +322,7 @@ const PaginatedHomePage: React.FC = () => {
   };
 
 
-  //................. Filter books based on search query
+  //................. Filter books based on search query................
 
   const filteredBooks = books.filter(
     (book) =>
