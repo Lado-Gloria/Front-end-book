@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-
+// ....................Define the Book interface for type checking
 interface Book {
   image: string;
   title: string;
@@ -16,7 +16,7 @@ interface Book {
 interface BookCardProps {
   book: Book;
 }
-
+// ....................BookCard component definition
 const BookCard: React.FC<BookCardProps> = ({ book }) => {
   return (
     <div className="card">

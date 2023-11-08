@@ -4,6 +4,7 @@ import BookCard from '../components/BookCard/page';
 import SearchBar from '../components/searchBar/page';
 import Footer from '../components/Footer/page';
 
+// Define the Book interface for type checking
 
 interface Book {
   image: string;
@@ -13,7 +14,7 @@ interface Book {
   isbn: string;
   description: string;
 }
-
+// Array of books data
 const books: Book[] = [
   { 
     image: '/images/one.jpg' ,
@@ -306,8 +307,10 @@ const books: Book[] = [
   },
  
 ];
-
+//................ Number of items to display per page
 const ITEMS_PER_PAGE = 8;
+
+  //............. State variables for search query and current page number
 
 const PaginatedHomePage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -317,6 +320,9 @@ const PaginatedHomePage: React.FC = () => {
     setSearchQuery(query);
     setCurrentPage(1);
   };
+
+
+  //................. Filter books based on search query
 
   const filteredBooks = books.filter(
     (book) =>
