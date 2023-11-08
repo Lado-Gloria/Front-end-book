@@ -1,32 +1,21 @@
 import React from 'react';
-import Image from 'next/image';
-import styles from './styles.module.css'; // Import your CSS module if styles are defined in a separate file
+import BookCard, { Book } from './BookCard';
 
-interface Book {
-  image: string;
-  title: string;
-  author: string;
-  publicationYear: number;
-  isbn: string;
-  description: string;
-}
+const bookData: Book = {
+  image: 'book-image.jpg',
+  title: 'Example Book',
+  author: 'John Doe',
+  publicationYear: 2023,
+  isbn: '1234567890',
+  description: 'This is an example book description.',
+};
 
-interface BookCardProps {
-  book: Book;
-}
-
-const BookCard: React.FC<BookCardProps> = ({ book }) => {
+const Page: React.FC = () => {
   return (
-    <div className={styles.card}>
-      {book.image && (
-        <Image src={book.image} alt={book.title} width={300} height={200} />
-      )}
-      <h3>{book.title}</h3>
-      <p>Author: {book.author}</p>
-      <p>Publication Year: {book.publicationYear}</p>
-      <div className={styles.tooltip}>{book.description}</div>
+    <div>
+      <BookCard book={bookData} />
     </div>
   );
 };
 
-export default BookCard;
+export default Page;

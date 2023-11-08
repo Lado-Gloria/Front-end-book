@@ -1,44 +1,20 @@
-'use client'
-import React, { useState } from 'react';
+import React from 'react';
+import SearchBar from './SearchBar'; 
 
-interface SearchBarProps {
-  onSearch: (query: string) => void;
-}
-
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState<string>('');
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
-    onSearch(event.target.value);
+const Page: React.FC = () => {
+  const handleSearch = (query: string) => {
+    
+    console.log('Searching for:', query);
+   
   };
 
   return (
-    <div className="search-bar  ">
-      <input
-        type="text"
-        placeholder="Search by title or author"
-        value={searchQuery}
-        onChange={handleInputChange}
-      />
-
-<style jsx>{`
-        .search-bar {
-          display: flex;
-          border: 1px solid #000
-          align-items: center;
-          justify-content: center;
-  
-        
-        }
-
-        .search-bar input {
-          padding: 8px;
-          margin-right: 25px;
-        }
-      `}</style>
+    <div>
+    
+    
+      <SearchBar onSearch={handleSearch} />
     </div>
   );
 };
 
-export default SearchBar;
+export default Page;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import BookCard from '../components/BookCard/page';
-import SearchBar from '../components/searchBar/page';
+import BookCard from '../components/BookCard/BookCard';
+import SearchBar from '../components/searchBar/SearchBar';
 
 interface Book {
   title: string;

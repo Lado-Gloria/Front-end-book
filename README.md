@@ -24,9 +24,10 @@ npm install tailwindcss
 ```
 
 # Generate a default configuration file for Tailwind CSS
+```bash
 npx tailwindcss init -p
 ```
-
+```bash
 npm run dev
 ```
 
