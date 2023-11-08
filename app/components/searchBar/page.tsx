@@ -12,7 +12,7 @@ const Page: React.FC = () => {
     <div>
     
     
-      <SearchBar onSearch={handleSearch} />
+      {/* <SearchBar onSearch={handleSearch} /> */}
     </div>
   );
 };
